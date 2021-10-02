@@ -1,3 +1,0 @@
-1. Background -> assets/styles/index.css
-2. Time / length -> scripts/timedown/main.js
-3. Timer 30 sec / end audio -> index.js
