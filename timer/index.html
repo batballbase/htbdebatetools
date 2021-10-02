@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>全民辩计时器</title>
+    <link rel="stylesheet" href="assets/scripts/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/scripts/jquery_onepage/css/onepage-scroll.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <script src="assets/scripts/seajs/sea.js" id="seajsnode"></script>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+
+<div class="main">
+
+    <!--主页-->
+    <div class="container-fluid" id="coverimage">
+        <div class="row" style="height: 64.5vh;"></div>
+        <div class="row">
+            <div class="col-12 text-center align-items-center">
+                <button class="btn-outline-dark btn-lg" onclick="time_30sec_audio()" style="background-color: transparent;">30秒铃声</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn-outline-dark btn-lg" onclick="time_end_audio()" style="background-color: transparent;">结束铃声</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 申论（一）-->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_zhengfang_lilun"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhengfang_lilun" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_lilun" class="btnPause">停止</button>
+                    <button id="resetBtn_zhengfang_lilun" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论（一）</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_fanfang_lilun"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_fanfang_lilun" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_lilun" class="btnPause">停止</button>
+                    <button id="resetBtn_fanfang_lilun" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 结束 -->
+
+    <!-- 对辩（一）-->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <!-- 正方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_left">正方</h1>
+                <h1 id="time_zhengfang_taigang1"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_zhengfang_taigang1" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_taigang1" class="btnPause">停止</button>
+                </div>
+            </div>
+            <!-- Time and Buttons -->
+            <div class="col-lg-2 text-center">
+                <div class="huanjiespace_top"></div>
+
+                <span class="text-center">对辩（一）</span>
+
+                <div class="buttonspace_top"></div>
+                <div class="btn-group" role="group">
+
+                    <button id="switchBtn_taigang1" class="btnStart">切换</button>
+                    <button id="stopBtn_shuangfang_taigang1" class="btnPause">停止</button>
+                    <button id="resetBtn_shuangfang_taigang1" class="btnReset">重置</button></button>
+                </div>
+            </div>
+            <!-- 持方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_right">反方</h1>
+                <h1 id="time_fanfang_taigang1"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_fanfang_taigang1" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_taigang1" class="btnPause">停止</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--结束-->
+
+    <!-- 申论（二） -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_zhengfang_bolun1"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhengfang_bolun1" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_bolun1" class="btnPause">停止</button>
+                    <button id="resetBtn_zhengfang_bolun1" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论（二）</span>
+                <br>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_fanfang_bolun1"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_fanfang_bolun1" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_bolun1" class="btnPause">停止</button>
+                    <button id="resetBtn_fanfang_bolun1" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 结束 -->
+
+    <!-- 对辩（二）-->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <!-- 正方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_left">正方</h1>
+                <h1 id="time_zhengfang_taigang2"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_zhengfang_taigang2" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_taigang2" class="btnPause">停止</button>
+                </div>
+            </div>
+            <!-- Time and Buttons -->
+            <div class="col-lg-2 text-center">
+                <div class="huanjiespace_top"></div>
+
+                <span class="text-center">对辩（二）</span>
+
+                <div class="buttonspace_top"></div>
+                <div class="btn-group" role="group">
+
+                    <button id="switchBtn_taigang2" class="btnStart">切换</button>
+                    <button id="stopBtn_shuangfang_taigang2" class="btnPause">停止</button>
+                    <button id="resetBtn_shuangfang_taigang2" class="btnReset">重置</button></button>
+                </div>
+            </div>
+            <!-- 持方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_right">反方</h1>
+                <h1 id="time_fanfang_taigang2"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_fanfang_taigang2" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_taigang2" class="btnPause">停止</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--结束-->
+
+    <!-- 申论（三） -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_zhengfang_bolun2"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhengfang_bolun2" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_bolun2" class="btnPause">停止</button>
+                    <button id="resetBtn_zhengfang_bolun2" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论（三）</span>
+                <br>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_fanfang_bolun2"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_fanfang_bolun2" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_bolun2" class="btnPause">停止</button>
+                    <button id="resetBtn_fanfang_bolun2" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 结束 -->
+
+    <!-- 对辩（三）-->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <!-- 正方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_left">正方</h1>
+                <h1 id="time_zhengfang_taigang3"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_zhengfang_taigang3" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_taigang3" class="btnPause">停止</button>
+                </div>
+            </div>
+            <!-- Time and Buttons -->
+            <div class="col-lg-2 text-center">
+                <div class="huanjiespace_top"></div>
+
+                <span class="text-center">对辩（三）</span>
+
+                <div class="buttonspace_top"></div>
+                <div class="btn-group" role="group">
+
+                    <button id="switchBtn_taigang3" class="btnStart">切换</button>
+                    <button id="stopBtn_shuangfang_taigang3" class="btnPause">停止</button>
+                    <button id="resetBtn_shuangfang_taigang3" class="btnReset">重置</button></button>
+                </div>
+            </div>
+            <!-- 持方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_right">反方</h1>
+                <h1 id="time_fanfang_taigang3"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_fanfang_taigang3" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_taigang3" class="btnPause">停止</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--结束-->
+
+    <!-- 总结环节 -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col">
+                <div>
+                    <h1 class="bian_name_left">中场休息</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h1 id="time_zhongchangxiuxi"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhongchangxiuxi" class="btnStart">开始</button>
+                    <button id="stopBtn_zhongchangxiuxi" class="btnPause">停止</button>
+                    <button id="resetBtn_zhongchangxiuxi" class="btnReset">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 总结环节 -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_zhengfang_zongjie"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhengfang_zongjie" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_zongjie" class="btnPause">停止</button>
+                    <button id="resetBtn_zhengfang_zongjie" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">总结</span><br>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_fanfang_zongjie"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_fanfang_zongjie" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_zongjie" class="btnPause">停止</button>
+                    <button id="resetBtn_fanfang_zongjie" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 投票时间 -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">缓冲时间</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">投票时间</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_toupiao_huanchong"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_toupiao_huanchong" class="btnStart">开始</button>
+                    <button id="stopBtn_toupiao_huanchong" class="btnPause">停止</button>
+                    <button id="resetBtn_toupiao_huanchong" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">投票环节</span><br>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_toupiao_toupiao"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_toupiao_toupiao" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_toupiao_toupiao" class="btnPause">停止</button>
+                    <button id="resetBtn_toupiao_toupiao" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 缓冲时间 -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm">
+        </div>
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_zhengfang_huanchong"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_zhengfang_huanchong" class="btnStart">开始</button>
+                    <button id="stopBtn_zhengfang_huanchong" class="btnPause">停止</button>
+                    <button id="resetBtn_zhengfang_huanchong" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">缓冲时间</span><br>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_fanfang_huanchong"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_fanfang_huanchong" class="btnStart">开始
+                    </button>
+                    <button id="stopBtn_fanfang_huanchong" class="btnPause">停止</button>
+                    <button id="resetBtn_fanfang_huanchong" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 结束 -->
+</div>
+
+<script type="text/javascript">
+    // seajs配置
+    seajs.config({
+        base: "./assets/scripts/",
+        alias: {
+            "jquery": "jquery/jquery",
+            "onepage": "jquery_onepage/js/jquery.onepage-scroll",
+            "jplay": "jquery_jplay/jquery.jplayer.min",
+            "timer": "jquery_custimer/jquery.custimer",
+            "jstorage": "jquery_jstorage/jstorage.min"
+        }
+    })
+
+    // 加载入口模块
+    seajs.use("application/application");
+    seajs.use("timedown/main");
+
+    $(document).keydown(function (e) {
+        //自由分配-正方：A键开始 S键结束
+        if (e.keyCode == 65) {
+            $("#beginBtn6").click();
+        }
+        if (e.keyCode == 83) {
+            $("#stopBtn6").click();
+        }
+        //自由分配-反方：D键开始 F键结束
+        if (e.keyCode == 68) {
+            $("#beginBtn6_1").click();
+        }
+        if (e.keyCode == 70) {
+            $("#stopBtn6_1").click();
+        }
+        //自由辩论-G切换
+        if (e.keyCode == 71) {
+            $("#doubleBtn2").click();
+        }
+        //自由辩论-H停止
+        if (e.keyCode == 72) {
+            $("#doubleStopBtn2").click();
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
+

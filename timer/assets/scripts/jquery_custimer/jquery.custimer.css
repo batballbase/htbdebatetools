@@ -1,0 +1,16 @@
+/*字体*/
+@font-face {
+    font-family: pxbus;
+    src: url('../../res/6px2bus.ttf');
+
+}
+@font-face {
+
+    font-family: name;
+    src: url('../../res/hyk1gjm.ttf');
+}
+
+.timedownclass {
+    font-family: pxbus;
+    font-size: 100px;
+}

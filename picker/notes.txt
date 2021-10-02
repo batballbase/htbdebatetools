@@ -1,4 +1,0 @@
-Teams -> js/settings.js > var allPerson (semicolon must be typed with English keyboard)
-Background -> css/style.css > img/bg.png
-Start audio -> js/index.js > "audio/start.ogg"
-Stop audio -> js/index.js > "audio/stop.ogg"
