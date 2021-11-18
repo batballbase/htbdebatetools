@@ -185,3 +185,20 @@ var fanfang_zongjie_timeend = setInterval(function(){
 var fanfang_zongjie_time30sec = setInterval(function(){
     time30sec_trigger("#time_fanfang_zongjie", fanfang_zongjie_time30sec);
 }, 1000);
+
+// ========
+// | 缓冲 |
+// ========
+var zhengfang_huanchong_timeend = setInterval(function(){
+    timeend_trigger("#time_zhengfang_huanchong", zhengfang_huanchong_timeend);
+}, 1000);
+var zhengfang_huanchong_time30sec = setInterval(function(){
+    time30sec_trigger("#time_zhengfang_huanchong", zhengfang_huanchong_time30sec);
+}, 1000);
+
+var fanfang_huanchong_timeend = setInterval(function(){
+    timeend_trigger("#time_fanfang_huanchong", fanfang_huanchong_timeend);
+}, 1000);
+var fanfang_huanchong_time30sec = setInterval(function(){
+    time30sec_trigger("#time_fanfang_huanchong", fanfang_huanchong_time30sec);
+}, 1000);

@@ -211,6 +211,23 @@ define(function (require, exports, module) {
         reset_btn_id: 'resetBtn_fanfang_zongjie',
     });
 
+    // ============
+    // | 缓冲环节 |
+    // ============
+    $("#time_zhengfang_huanchong").custimer({
+        time_length: 300,
+        begin_btn_id: "beginBtn_zhengfang_huanchong",
+        stop_btn_id: "stopBtn_zhengfang_huanchong",
+        reset_btn_id: 'resetBtn_zhengfang_huanchong',
+    });
+
+    $("#time_fanfang_huanchong").custimer({
+        time_length: 300,
+        begin_btn_id: "beginBtn_fanfang_huanchong",
+        stop_btn_id: "stopBtn_fanfang_huanchong",
+        reset_btn_id: 'resetBtn_fanfang_huanchong',
+    });
+
     var matrix = [
         [
             {full: 0}, {full: 1, moveDirection: 'yx'}, {full: 0}
