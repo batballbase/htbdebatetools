@@ -223,14 +223,14 @@ define(function (require, exports, module) {
     // | 总结环节 |
     // ============
     $("#time_zhengfang_zongjie").custimer({
-        time_length: 180,
+        time_length: 240,
         begin_btn_id: "beginBtn_zhengfang_zongjie",
         stop_btn_id: "stopBtn_zhengfang_zongjie",
         reset_btn_id: 'resetBtn_zhengfang_zongjie',
     });
 
     $("#time_fanfang_zongjie").custimer({
-        time_length: 180,
+        time_length: 240,
         begin_btn_id: "beginBtn_fanfang_zongjie",
         stop_btn_id: "stopBtn_fanfang_zongjie",
         reset_btn_id: 'resetBtn_fanfang_zongjie',
@@ -251,23 +251,6 @@ define(function (require, exports, module) {
         begin_btn_id: "beginBtn_fanfang_huanchong",
         stop_btn_id: "stopBtn_fanfang_huanchong",
         reset_btn_id: 'resetBtn_fanfang_huanchong',
-    });
-
-    // ============
-    // | 投票环节 |
-    // ============
-    $("#time_toupiao_huanchong").custimer({
-        time_length: 60,
-        begin_btn_id: "beginBtn_toupiao_huanchong",
-        stop_btn_id: "stopBtn_toupiao_huanchong",
-        reset_btn_id: 'resetBtn_toupiao_huanchong',
-    });
-
-    $("#time_toupiao_toupiao").custimer({
-        time_length: 60,
-        begin_btn_id: "beginBtn_toupiao_toupiao",
-        stop_btn_id: "stopBtn_toupiao_toupiao",
-        reset_btn_id: 'resetBtn_toupiao_toupiao',
     });
 
     var matrix = [
