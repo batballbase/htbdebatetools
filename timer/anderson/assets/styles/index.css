@@ -27,12 +27,12 @@ html, body {
 }
 
 #coverimage{
-    background-image:url(../images/cover3.jpg);
+    background-image:url(../images/cover.jpg);
 }
 
 .container-fluid {
     width: 100%;
-    background-image: url(../images/timer3.jpg);
+    background-image: url(../images/bg.jpg);
 
     /* Full height */
     height: 100vh; 
