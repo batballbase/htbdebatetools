@@ -1713,7 +1713,7 @@ var targetDom = null;
     download: function download() {
       var that = this;
       var resultList = JSON.parse(JSON.stringify(that.resultList));
-      var cvs = "姓名,職位,獎項\n" + resultList.map(function (Obj) {
+      var cvs = "学校,,组别\n" + resultList.map(function (Obj) {
         var data = [];
         data.push(Obj.name);
         data.push(Obj.pos);
@@ -1954,7 +1954,7 @@ var mixpanelTrackerTimer = null;
     clear: function clear() {
       var that = this;
 
-      if (confirm("您確定要清除所有的資料嗎？")) {
+      if (confirm("确定清除所有资料？")) {
         that.$store.dispatch("clearAllData");
         lib_common_util__WEBPACK_IMPORTED_MODULE_2__["mixpanel"].track("clear all data");
         targetDom.modal("hide");
@@ -2189,7 +2189,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "form-control",
-                attrs: { placeholder: "請一行一行條列輸入候選名單" },
+                attrs: { placeholder: "请一行一行输入学校名单" },
                 domProps: { value: _vm.shortlistTextarea },
                 on: {
                   input: function ($event) {
@@ -2418,7 +2418,7 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "modal-body" }, [
             _c("div", { staticClass: "text-center" }, [
-              _c("h4", [_vm._v("恭喜中獎")]),
+              _c("h4", [_vm._v("")]),
               _vm._v(" "),
               _vm.focusShortlist
                 ? _c(
@@ -2431,7 +2431,7 @@ var render = function () {
                     1
                   )
                 : _vm._e(),
-              _vm._v("\n                    中獎獎項\n                    "),
+              _vm._v("\n                    组别\n                    "),
               _c("div", { staticClass: "form-group" }, [
                 _c("div", {
                   staticClass: "form-control text-center",
@@ -2479,7 +2479,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c("h5", { staticClass: "modal-title" }, [
         _c("i", { staticClass: "fas fa-vote-yea" }),
-        _vm._v("\n                    恭喜中獎\n                "),
+        _vm._v("\n                    抽签结果\n                "),
       ]),
     ])
   },
