@@ -1703,8 +1703,8 @@ var targetDom = null;
     return {
       resultList: [],
       luckyOption: {
-        0: "未中獎",
-        1: "中獎"
+        0: "-",
+        1: "已抽签"
       },
       editsortList: null
     };
@@ -1725,7 +1725,7 @@ var targetDom = null;
       var link = document.createElement("a");
       link.style.display = "none";
       link.setAttribute("href", encodedUri);
-      link.setAttribute("download", that.config.webTitle + "中獎名單.csv");
+      link.setAttribute("download", that.config.webTitle + "抽签名单.csv");
       document.body.appendChild(link); // Required for FF
 
       link.click();
@@ -2212,7 +2212,7 @@ var render = function () {
                   attrs: { type: "button" },
                   on: { click: _vm.randomSort },
                 },
-                [_vm._v("打亂排序")]
+                [_vm._v("打乱排序")]
               ),
             ]),
             _vm._v(" "),
@@ -2233,7 +2233,7 @@ var render = function () {
                   attrs: { type: "button" },
                   on: { click: _vm.save },
                 },
-                [_vm._v("儲存")]
+                [_vm._v("储存")]
               ),
             ]),
           ]),
@@ -2250,7 +2250,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c("h5", { staticClass: "modal-title" }, [
         _c("i", { staticClass: "fas fa-user-edit" }),
-        _vm._v("\n                    編輯名單\n                "),
+        _vm._v("\n                    学校名单\n                "),
       ]),
       _vm._v(" "),
       _c(
@@ -2361,7 +2361,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c("h5", { staticClass: "modal-title" }, [
         _c("i", { staticClass: "fas fa-vote-yea" }),
-        _vm._v("\n                    選取獎項\n                "),
+        _vm._v("\n                    抽签组别\n                "),
       ]),
       _vm._v(" "),
       _c(
@@ -2608,7 +2608,7 @@ var render = function () {
                           },
                         },
                       },
-                      [_vm._v("新增獎項")]
+                      [_vm._v("新增组别")]
                     ),
                   ]
                 : [
@@ -2623,7 +2623,7 @@ var render = function () {
                           },
                         ],
                         staticClass: "form-control",
-                        attrs: { type: "text", placeholder: "新增的獎項名稱" },
+                        attrs: { type: "text", placeholder: "组别" },
                         domProps: { value: _vm.newPrize },
                         on: {
                           input: function ($event) {
@@ -2664,7 +2664,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c("h5", { staticClass: "modal-title" }, [
         _c("i", { staticClass: "fas fa-award" }),
-        _vm._v("\n                    獎項名單\n                "),
+        _vm._v("\n                    组别名单\n                "),
       ]),
       _vm._v(" "),
       _c(
@@ -2940,7 +2940,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c("h5", { staticClass: "modal-title" }, [
         _c("i", { staticClass: "fas fa-vote-yea" }),
-        _vm._v("\n                    中獎名單\n                "),
+        _vm._v("\n                    抽签结果\n                "),
       ]),
       _vm._v(" "),
       _c(
@@ -2965,11 +2965,11 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", { staticStyle: { width: "15%" } }, [_vm._v("#")]),
         _vm._v(" "),
-        _c("th", { staticStyle: { width: "30%" } }, [_vm._v("姓名")]),
+        _c("th", { staticStyle: { width: "30%" } }, [_vm._v("学校")]),
         _vm._v(" "),
-        _c("th", [_vm._v("獎項")]),
+        _c("th", [_vm._v("组别")]),
         _vm._v(" "),
-        _c("th", { staticStyle: { width: "20%" } }, [_vm._v("功能")]),
+        _c("th", { staticStyle: { width: "20%" } }, [_vm._v("编辑")]),
       ]),
     ])
   },
