@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>对抗赛计时器 - 2v2</title>
+    <link rel="stylesheet" href="assets/scripts/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/scripts/jquery_onepage/css/onepage-scroll.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <script src="assets/scripts/seajs/sea.js" id="seajsnode"></script>
+    <script src="assets/scripts/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Cover page -->
+    <div class="container-fluid" id="coverimage">
+        <div class="row" style="height: 64.5vh;"></div>
+        <div class="row">
+            <div class="col-12 text-center align-items-center">
+                <button class="btn-outline-dark btn-lg" onclick="time_30sec_audio()" style="background-color: transparent;">30秒铃声</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn-outline-dark btn-lg" onclick="time_end_audio()" style="background-color: transparent;">结束铃声</button>
+            </div>
+        </div>
+    </div>
+    <!-- Cover page end -->
+
+
+
+    <!-- Double Timer, Huanjie 1 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie1_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie1_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie1_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie1_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie1_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie1_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie1_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie1_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 1 -->
+
+
+
+
+
+    <!-- Double Timer, Huanjie 2 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie2_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie2_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie2_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie2_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">质询</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie2_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie2_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie2_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie2_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 2 -->
+
+
+
+
+
+    <!-- Double Timer, Huanjie 3 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie3_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie3_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie3_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie3_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie3_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie3_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie3_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie3_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 3 -->
+
+
+
+
+
+    <!-- Double Timer, Huanjie 4 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie4_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie4_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie4_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie4_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">质询</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie4_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie4_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie4_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie4_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 4 -->
+
+
+
+
+
+    <!-- Double Timer, Huanjie 5 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie5_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie5_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie5_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie5_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">申论</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie5_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie5_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie5_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie5_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 5 -->
+
+
+
+
+
+    <!-- Double Timer, Huanjie 6 -->
+    <div class="container-fluid">
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <!-- 正方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_left">正方</h1>
+                <h1 id="time_huanjie6_zheng"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_huanjie6_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie6_zheng" class="btnPause">停止</button>
+                </div>
+            </div>
+            <!-- Time and Buttons -->
+            <div class="col-lg-2 text-center">
+                <div class="huanjiespace_top"></div>
+
+                <span class="text-center">自由辩</span>
+
+                <div class="buttonspace_top"></div>
+                <div class="btn-group" role="group">
+
+                    <button id="switchBtn_huanjie6" class="btnStart">切换</button>
+                    <button id="stopBtn_huanjie6_shuangfang" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie6_shuangfang" class="btnReset">重置</button></button>
+                </div>
+            </div>
+            <!-- 持方 -->
+            <div class="col-lg-5 text-center">
+                <h1 class="bian_name_right">反方</h1>
+                <h1 id="time_huanjie6_fan"></h1>
+                <div style="display:none;">
+                    <button id="beginBtn_huanjie6_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie6_fan" class="btnPause">停止</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 6 -->    
+
+
+
+
+
+    <!-- Double Timer, Huanjie 7 -->
+    <div class="container-fluid">
+        <!-- Push content down -->
+        <div class="row text-center margin-top-sm"></div>
+
+        <div class="row margin-top-md">
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_left">正方</h1>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <h1 class="bian_name_right">反方</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie7_zheng"></h1>
+
+                <div class="btn-group" role="group">
+                    <button id="beginBtn_huanjie7_zheng" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie7_zheng" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie7_zheng" class="btnReset">重置</button>
+                </div>
+            </div>
+            <div class="col-lg-2 text-center">
+                <span class="text-center">总结</span>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h1 id="time_huanjie7_fan"></h1>
+
+                <div class="btn-group" role="group" >
+                    <button id="beginBtn_huanjie7_fan" class="btnStart">开始</button>
+                    <button id="stopBtn_huanjie7_fan" class="btnPause">停止</button>
+                    <button id="resetBtn_huanjie7_fan" class="btnReset">重置</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Double Timer End, Huanjie 7 -->  
+
+</div>
+
+<script type="text/javascript">
+    // seajs配置
+    seajs.config({
+        base: "./assets/scripts/",
+        alias: {
+            "jquery": "jquery/jquery",
+            "onepage": "jquery_onepage/js/jquery.onepage-scroll",
+            "jplay": "jquery_jplay/jquery.jplayer.min",
+            "timer": "jquery_custimer/jquery.custimer",
+            "jstorage": "jquery_jstorage/jstorage.min"
+        }
+    })
+
+    // 加载入口模块
+    seajs.use("application/application");
+    seajs.use("timedown/main");
+
+    $(document).keydown(function (e) {
+        //自由分配-正方：A键开始 S键结束
+        if (e.keyCode == 65) {
+            $("#beginBtn6").click();
+        }
+        if (e.keyCode == 83) {
+            $("#stopBtn6").click();
+        }
+        //自由分配-反方：D键开始 F键结束
+        if (e.keyCode == 68) {
+            $("#beginBtn6_1").click();
+        }
+        if (e.keyCode == 70) {
+            $("#stopBtn6_1").click();
+        }
+        //自由辩论-G切换
+        if (e.keyCode == 71) {
+            $("#doubleBtn2").click();
+        }
+        //自由辩论-H停止
+        if (e.keyCode == 72) {
+            $("#doubleStopBtn2").click();
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
+
