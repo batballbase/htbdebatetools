@@ -168,3 +168,20 @@ var huanjie7_fan_timeend = setInterval(function(){
 var huanjie7_fan_time30sec = setInterval(function(){
     time30sec_trigger("#time_huanjie7_fan", huanjie7_fan_time30sec);
 }, 1000);
+
+
+
+// Huanjie 8
+var huanjie8_zheng_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie8_zheng", huanjie8_zheng_timeend);
+}, 1000);
+var huanjie8_zheng_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie8_zheng", huanjie8_zheng_time30sec);
+}, 1000);
+
+var huanjie8_fan_timeend = setInterval(function(){
+    timeend_trigger("#time_huanjie8_fan", huanjie8_fan_timeend);
+}, 1000);
+var huanjie8_fan_time30sec = setInterval(function(){
+    time30sec_trigger("#time_huanjie8_fan", huanjie8_fan_time30sec);
+}, 1000);
